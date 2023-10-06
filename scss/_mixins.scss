@@ -1,0 +1,9 @@
+%templ{
+    width: 500px;
+    font-size: 30px;
+}
+@mixin pos($top:50%, $left:50%){
+    position: absolute;
+    top: $top;
+    left: $left;
+}

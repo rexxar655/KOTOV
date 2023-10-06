@@ -1,0 +1,25 @@
+:root {
+	--color-main: #ffe0cb;
+	--color-second: #ffa55c;
+	--color-third: #ceaad0;
+	--color-footer: #ab8261;
+	--color-title: #1f1711;
+	--color-bg: #fff9f4;
+}
+html {
+	scroll-behavior: smooth;
+	scroll-padding-top: 10vh;
+}
+
+.body {
+	font-family: Montserrat, Arial, sans-serif;
+	color: #312c27;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 150%;
+	background: var(--color-bg);
+
+}
+
+
