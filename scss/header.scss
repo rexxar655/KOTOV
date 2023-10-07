@@ -113,8 +113,8 @@
 	&__burger {
 		display: flex;
 		flex-direction: column;
-		width: 420px;
-		height: 90vh;
+		max-width: 420px;
+		height: 100vh;
 		background: #FFF;
 		color: #191919;
 		font-family: Inter;
