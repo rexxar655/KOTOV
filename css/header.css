@@ -152,8 +152,7 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 420px;
-  height: 90vh;
+  max-width: 420px;
   background: #FFF;
   color: #191919;
   font-family: Inter;
@@ -187,9 +186,11 @@
 .header__link {
   -webkit-transition: var(--transition);
   transition: var(--transition);
+  border-bottom: 1px solid var(--color-second-text);
 }
 .header__link:hover {
   color: var(--color-accent);
+  border-bottom: 1px solid hsla(15, 87%, 55%, 0.5);
 }
 .header__social {
   display: -webkit-box;

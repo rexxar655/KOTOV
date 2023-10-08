@@ -114,7 +114,7 @@
 		display: flex;
 		flex-direction: column;
 		max-width: 420px;
-		height: 100vh;
+		
 		background: #FFF;
 		color: #191919;
 		font-family: Inter;
@@ -138,17 +138,17 @@
 		padding-bottom: 150px;
 	}
 
-	// .header__item
-
-	&__item {
-	}
-
+	
 	// .header__link
 	&__link {
 		transition: var(--transition);
+		border-bottom: 1px solid var(--color-second-text);
+		// text-decoration: underline var(--color-second-text);
 	}
 	&__link:hover {
 		color: var(--color-accent);
+		border-bottom: 1px solid hsla(15, 87%, 55%, 0.5);
+
 	}
 	&__social {
 		display: flex;

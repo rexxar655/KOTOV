@@ -4,7 +4,7 @@
   --color-second-text: #999;
   --color-footer: #191919;
   --color-title: #000;
-  --color-bg-main: #fff;
+  --color-wite: #fff;
   --transition: all 0.4s;
 }
 
@@ -54,6 +54,7 @@ h1 {
 .btn {
   height: 56px;
   max-width: 274px;
+  width: 100%;
   padding: 17px 30px 17px 25px;
   background: #f0eeee;
   display: -webkit-box;
@@ -96,6 +97,8 @@ h1 {
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  -webkit-text-decoration: underline hsla(15, 87%, 55%, 0.5);
+          text-decoration: underline hsla(15, 87%, 55%, 0.5);
 }
 @media (max-width: 600px) {
   .accent-text {

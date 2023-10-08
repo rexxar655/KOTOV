@@ -1,97 +1,88 @@
-// // ====================BURGER================================
 ;(function () {
-		// const burger = document.querySelector('.header__menu')
-		// const body = document.querySelector('.body')
-
-		// burger.addEventListener('click', () => {
-		// 	body.classList.toggle('body--opened-menu')
-		// })
-
-		// const link = document.querySelector('.header__shadow')
-
-		// link.addEventListener('click', () => {
-		// 	body.classList.remove('body--opened-menu')
-		// })
-
+	// // =================================BURGER================================
 
 	;(function () {
 		document.addEventListener('click', burgerinit)
 		function burgerinit(e) {
 			const burger = e.target.closest('.header__menu')
-			const link = e.target.closest('.header__link')
+			const link = e.target.closest('.link')
 			if (!burger && !link) return
 			// if (document.documentElement.clientWidth > 900) return
+
+			
 			if (!document.body.classList.contains('body--opened-menu')) {
 				document.body.classList.add('body--opened-menu')
-			} else {
+			} 
+			
+			else {
 				document.body.classList.remove('body--opened-menu')
 			}
 		}
 	})()
 
-
 	// 	// ==================================MODAL==================================
 
-	// 	// const modalbtn = document.querySelector('.our-school__gift-link')
-	// 	// const bodymodal = document.querySelector('.body')
+	// const btn = document.querySelector('.modal-open')
+	// const btnFooter = document.querySelector('.modal-open-footer')
+	const array = document.querySelectorAll('.modal-open')
 
-	// 	// modalbtn.addEventListener('click', () => {
+	const modal = document.querySelector('.body')
 
-	// 	// 	bodymodal.classList.toggle('body--modal-opened')
-	// 	// })
+	const openModal = () => {
+		modal.classList.add('body--modal-opened')
+	}
+	const closeModal = () => {
+		modal.classList.remove('body--modal-opened')
+	}
 
-	// 	// const modalClosebtn = document.querySelector('.gift__close-btn')
+	array.forEach(e => {
+		e.addEventListener('click', openModal)
+	})
+	// btn.addEventListener('click', openModal)
+	// btnFooter.addEventListener('click', openModal)
 
-	// 	// modalClosebtn.addEventListener('click', () => {
-	// 	//     bodymodal.classList.remove('body--modal-opened')
-	// 	// })
+	modal.addEventListener('click', event => {
+		const target = event.target
 
-	// 	const btn = document.querySelector('.our-school__gift-link')
-	// 	const modal = document.querySelector('.body')
+		if (
+			(target && target.classList.contains('modal-call')) ||
+			event.target.id == 'close'
+		) {
+			closeModal()
+		}
+	})
 
-	// 	const openModal = () => {
-	// 		modal.classList.add('body--modal-opened')
-	// 	}
-	// 	const closeModal = () => {
-	// 		modal.classList.remove('body--modal-opened')
-	// 	}
-	// 	btn.addEventListener('click', openModal)
+		// ===================tel maska===================
 
-	// 	modal.addEventListener('click', event => {
-	// 		const target = event.target
+		const telInput = document.querySelectorAll('input[type="tel"]')
+		const im = new Inputmask('+7 (999) 999-99-99')
+		im.mask(telInput)
 
-	// 		if (
-	// 			(target && target.classList.contains('gift')) ||
-	// 			event.target.id == 'close'
-	// 		) {
-	// 			closeModal()
-	// 		}
-	// 	})
 
-	// 	// ==============================tabs==================================
+		// ==============================tabs==================================
 
-	// 	const tabControl = document.querySelector('.tabs')
+	const tabControl = document.querySelector('.tabs')
 
-	// 	tabControl.addEventListener('click', toogleTab)
+	tabControl.addEventListener('click', toogleTab)
 
-	// 	function toogleTab(e) {
-	// 		const tabControl = e.target.closest('.tabs__link')
+	function toogleTab(e) {
+		const tabControl = e.target.closest('.tabs__link')
 
-	// 		if (!tabControl) return
-	// 		e.preventDefault()
-	// 		if (tabControl.classList.contains('tabs__link--activ')) return
+		if (!tabControl) return
+		e.preventDefault()
+		if (tabControl.classList.contains('tabs__link--activ')) return
 
-	// 		const tabContentId = tabControl.getAttribute('href')
-	// 		const tabContent = document.querySelector(tabContentId)
-	// 		const activeControl = document.querySelector('.tabs__link--activ')
-	// 		const activeContent = document.querySelector('.tabs-content--show')
+		const tabContentId = tabControl.getAttribute('href')
+		const tabContent = document.querySelector(tabContentId)
+		const activeControl = document.querySelector('.tabs__link--activ')
+		const activeContent = document.querySelector('.tabs-content--show')
 
-	// 		if (activeContent) activeContent.classList.remove('tabs-content--show')
-	// 		if (activeControl) activeControl.classList.remove('tabs__link--activ')
+		if (activeContent) activeContent.classList.remove('tabs-content--show')
+		if (activeControl) activeControl.classList.remove('tabs__link--activ')
 
-	// 		tabContent.classList.add('tabs-content--show')
-	// 		tabControl.classList.add('tabs__link--activ')
-	// 	}
+		tabContent.classList.add('tabs-content--show')
+		tabControl.classList.add('tabs__link--activ')
+	}
 
 	// 	// =================================ACCORDION============================
 
@@ -202,10 +193,4 @@
 	// 		}
 
 	// 	});
-
-	// 	// ===================tel maska===================
-
-	// 	const telInput = document.querySelectorAll('input[type="tel"]')
-	// 	const im = new Inputmask('+7 (999) 999-99-99')
-	// 	im.mask(telInput)
 })()

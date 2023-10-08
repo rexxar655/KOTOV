@@ -28,10 +28,6 @@
   padding-bottom: 40px;
   color: #fff;
 }
-.footer__content-adress {
-  -webkit-text-decoration: underline hsla(15, 87%, 55%, 0.5);
-          text-decoration: underline hsla(15, 87%, 55%, 0.5);
-}
 .footer__content-text {
   padding: 40px 0 64px;
   display: -webkit-box;
@@ -41,10 +37,7 @@
 }
 .footer__content-text p {
   color: #fff;
-}
-.footer__content-text a {
-  -webkit-text-decoration: underline hsla(15, 87%, 55%, 0.5);
-          text-decoration: underline hsla(15, 87%, 55%, 0.5);
+  text-decoration: none;
 }
 @media (max-width: 500px) {
   .footer__content-text {
@@ -85,6 +78,7 @@
   -webkit-transition: var(--transition);
   transition: var(--transition);
   margin-top: 20px;
+  cursor: pointer;
 }
 @media (max-width: 900px) {
   .footer__btn {
