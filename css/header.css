@@ -103,6 +103,7 @@
   display: none;
   -ms-flex-item-align: center;
       align-self: center;
+  cursor: pointer;
 }
 .header__tel-mobile path {
   -webkit-transition: var(--transition);

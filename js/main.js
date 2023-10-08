@@ -9,12 +9,9 @@
 			if (!burger && !link) return
 			// if (document.documentElement.clientWidth > 900) return
 
-			
 			if (!document.body.classList.contains('body--opened-menu')) {
 				document.body.classList.add('body--opened-menu')
-			} 
-			
-			else {
+			} else {
 				document.body.classList.remove('body--opened-menu')
 			}
 		}
@@ -52,14 +49,13 @@
 		}
 	})
 
-		// ===================tel maska===================
+	// ===================tel maska===================
 
-		const telInput = document.querySelectorAll('input[type="tel"]')
-		const im = new Inputmask('+7 (999) 999-99-99')
-		im.mask(telInput)
+	const telInput = document.querySelectorAll('input[type="tel"]')
+	const im = new Inputmask('+7 (999) 999-99-99')
+	im.mask(telInput)
 
-
-		// ==============================tabs==================================
+	// ==============================tabs==================================
 
 	const tabControl = document.querySelector('.tabs')
 
@@ -193,4 +189,24 @@
 	// 		}
 
 	// 	});
+
+	let accordion = document.querySelector('.accordion')
+	let items = accordion.querySelectorAll('.accordion__item')
+	let title = accordion.querySelectorAll('.accordion__title')
+
+	function toggleAccordion() {
+		let thisItem = this.parentNode
+
+		items.forEach(item => {
+			if (thisItem == item) {
+				// if this item is equal to the clicked item, open it.
+				thisItem.classList.toggle('active')
+				return
+			}
+			// otherwise, remove the open class
+			item.classList.remove('active')
+		})
+	}
+
+	title.forEach(question => question.addEventListener('click', toggleAccordion))
 })()

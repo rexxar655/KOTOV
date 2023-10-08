@@ -68,6 +68,7 @@
 	&__tel-mobile {
 		display: none;
 		align-self: center;
+		cursor: pointer;
 		path {
 			transition: var(--transition);
 		}
