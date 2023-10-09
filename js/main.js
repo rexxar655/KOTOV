@@ -1,7 +1,7 @@
-;(function () {
+; (function () {
 	// // =================================BURGER================================
 
-	;(function () {
+	; (function () {
 		document.addEventListener('click', burgerinit)
 		function burgerinit(e) {
 			const burger = e.target.closest('.header__menu')
@@ -82,74 +82,64 @@
 
 	// 	// =================================ACCORDION============================
 
-	// 	const accordionLists = document.querySelectorAll('.accordion-list');
 
-	// 	accordionLists.forEach(el => {
+	let accordion = document.querySelector('.accordion')
+	let items = accordion.querySelectorAll('.accordion__item')
+	let title = accordion.querySelectorAll('.accordion__title')
 
-	// 		el.addEventListener('click', (e) => {
+	function toggleAccordion() {
+		let thisItem = this.parentNode
 
-	// 			const accordionList = e.currentTarget
-	// 			const accordionOpenedItem = accordionList.querySelector('.accordion-list__item--opened')
-	// 			const accordionOpenedContent = accordionList.querySelector('.accordion-list__item--opened .accordion-list__content')
+		items.forEach(item => {
+			if (thisItem == item) {
+				// if this item is equal to the clicked item, open it.
+				thisItem.classList.toggle('active')
+				return
+			}
+			// otherwise, remove the open class
+			item.classList.remove('active')
+		})
+	}
 
-	// 			const accordionControl = e.target.closest('.accordion-list__control');
-	// 			if (!accordionControl) return
-	// 			e.preventDefault()
-	// 			const accordionItem = accordionControl.parentElement;
-	// 			const accordionContent = accordionControl.nextElementSibling;
+	title.forEach(question => question.addEventListener('click', toggleAccordion))
 
-	// 			if (accordionOpenedItem && accordionItem != accordionOpenedItem) {
-	// 				accordionOpenedItem.classList.remove('accordion-list__item--opened');
-	// 				accordionOpenedContent.style.maxHeight = null;
-	// 			}
-	// 			accordionItem.classList.toggle('accordion-list__item--opened');
 
-	// 			if (accordionItem.classList.contains('accordion-list__item--opened')) {
-	// 				accordionContent.style.maxHeight = accordionContent.scrollHeight + 'px';
-	// 			} else {
-	// 				accordionContent.style.maxHeight = null;
-	// 			}
 
-	// 		});
 
-	// 	});
+	// 	// ========================projects SLIDER============================
 
-	// 	// ========================SLIDER-gallery============================
 
-	// 	const swiper = new Swiper('.gallery__swiper', {
-	// 		// Optional parameters
-	// 		spaceBetween: 15,
-	// 		slidesPerView: 1.5,
 
-	// 		// If we need pagination
-	// 		pagination: {
-	// 			el: '.gallery__pagination',
-	// 			type: 'fraction',
-	// 		},
+	const projectsSwiper = new Swiper('.projects__swiper', {
+		// Optional parameters
+		slidesPerView: 1,
+		
 
-	// 		// Navigation arrows
-	// 		navigation: {
-	// 			nextEl: '.gallery__next',
-	// 			prevEl: '.gallery__prev',
-	// 		},
-	// 		breakpoints: {
-	// 			// when window width is >= 450px
-	// 			450: {
-	// 				slidesPerView: 2,
-	// 				spaceBetween: 15,
-	// 			},
+		// If we need pagination
+		pagination: {
+			el: '.projects__pagination-fractal',
+			type: 'fraction',
 
-	// 			650: {
-	// 				slidesPerView: 3,
-	// 				spaceBetween: 25,
-	// 			},
+		},
 
-	// 			1101: {
-	// 				slidesPerView: 4,
-	// 				spaceBetween: 32,
-	// 			}
-	// 		}
-	// 	})
+		// Navigation arrows
+		navigation: {
+			nextEl: '.projects__next',
+			prevEl: '.projects__prev',
+		},
+
+	});
+	const pagingSwiper = new Swiper(".projects__swiper", {
+		pagination: {
+			el: ".projects__pagination",			
+
+		},
+	});
+
+	projectsSwiper.controller.control = pagingSwiper;
+
+
+
 
 	// 	// ==============slider comment====================
 
@@ -190,23 +180,5 @@
 
 	// 	});
 
-	let accordion = document.querySelector('.accordion')
-	let items = accordion.querySelectorAll('.accordion__item')
-	let title = accordion.querySelectorAll('.accordion__title')
 
-	function toggleAccordion() {
-		let thisItem = this.parentNode
-
-		items.forEach(item => {
-			if (thisItem == item) {
-				// if this item is equal to the clicked item, open it.
-				thisItem.classList.toggle('active')
-				return
-			}
-			// otherwise, remove the open class
-			item.classList.remove('active')
-		})
-	}
-
-	title.forEach(question => question.addEventListener('click', toggleAccordion))
 })()
