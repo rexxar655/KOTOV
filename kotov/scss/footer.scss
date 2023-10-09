@@ -1,0 +1,158 @@
+.footer {
+	background: #191919;
+	color: #fff;
+	margin-top: auto;
+	// .footer__inner
+
+
+
+	// .footer__top
+
+	&__top {
+		display: flex;
+		justify-content: space-between;
+		padding-top: 84px;
+	}
+
+	// .footer__content
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+	}
+
+	// .footer__content-time
+
+	&__content-time {
+		padding-bottom: 16px;
+	}
+
+	// .footer__content-tel
+
+	&__content-tel {
+		padding-bottom: 40px;
+		color: #fff;
+	}
+	
+
+	// .footer__content-text
+
+	&__content-text {
+		padding: 40px 0 64px;
+		display: flex;
+		gap: 15px;
+		p {
+			color: #fff;
+			text-decoration: none;
+		}
+		
+		@media (max-width: 500px) {
+			flex-direction: column;
+			gap: 0;
+			padding: 26px 0 40px;
+		}
+	}
+
+	// .footer__social
+
+	&__social {
+		display: flex;
+		gap: 25px;
+		align-items: center;
+		padding-bottom: 64px;
+		@media (max-width: 600px) {
+			padding-bottom: 50px;
+		}
+	}
+
+	// .footer__social-link
+	&__social-link path {
+		transition: var(--transition);
+	}
+	&__social-link:hover path {
+		fill: var(--color-accent);
+	}
+
+	// .footer__btn
+
+	&__btn {
+		background: #191919;
+		color: #fff;
+		border: 2px solid #fff;
+		transition: var(--transition);
+		margin-top: 20px;
+		cursor: pointer;
+		@media (max-width: 900px) {
+			display: none;
+		}
+	}
+	&__btn:hover {
+		background: var(--color-accent);
+		border: 2px solid var(--color-accent);
+	}
+
+	// .footer__nav
+
+	&__nav {
+		display: flex;
+		gap: 40px;
+		padding-bottom: 106px;
+		flex-wrap: wrap;
+		@media (max-width: 600px) {
+			flex-direction: column;
+			gap: 16px;
+		}
+	}
+
+	// .footer__item
+
+
+
+	// .footer__link
+
+	&__link {
+		transition: var(--transition);
+	}
+	&__link:hover {
+		color: var(--color-accent);
+	}
+	&__border {
+		border-top: 2px solid rgba(153, 153, 153, 0.5);
+	}
+
+	// .footer__bottom
+
+	&__bottom {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		min-height: 106px;
+		@media (max-width: 900px) {
+            padding: 35px 0 102px;
+			flex-direction: column;
+			gap: 24px;
+            align-items: flex-start;
+		}
+	}
+
+	// .footer__logo
+
+	&__logo {
+		max-width: 134px;
+	}
+
+	// .footer__bottom-text
+
+	&__bottom-text {
+		padding-left: 67px;
+		@media (max-width: 900px) {
+			padding-left: 0px;
+		}
+	}
+	&__bottom-copi {
+		margin-left: auto;
+		@media (max-width: 900px) {
+			margin-left: 0;
+		}
+	}
+}
