@@ -154,7 +154,8 @@
       -ms-flex-direction: column;
           flex-direction: column;
   max-width: 420px;
-  background: #FFF;
+  position: relative;
+  background: #fff;
   color: #191919;
   font-family: Inter;
   font-size: 24px;
@@ -183,6 +184,19 @@
           flex-direction: column;
   gap: 25px;
   padding-bottom: 150px;
+}
+.header__burger-close {
+  color: #000;
+  font-size: 48px;
+  font-weight: 700;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 33px;
+  position: absolute;
+  top: 16px;
+  right: 20px;
+  cursor: pointer;
 }
 .header__link {
   -webkit-transition: var(--transition);

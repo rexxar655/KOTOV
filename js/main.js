@@ -140,7 +140,6 @@
 
 
 
-
 	// 	// ==============slider comment====================
 
 	// 	new Swiper('.comment__slider', {

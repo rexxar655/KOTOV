@@ -99,6 +99,7 @@ h1 {
   line-height: normal;
   -webkit-text-decoration: underline hsla(15, 87%, 55%, 0.5);
           text-decoration: underline hsla(15, 87%, 55%, 0.5);
+  display: inline-block;
 }
 @media (max-width: 600px) {
   .accent-text {

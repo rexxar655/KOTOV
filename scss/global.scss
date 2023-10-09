@@ -78,8 +78,9 @@ h1 {
 	font-size: 24px;
 	font-style: normal;
 	font-weight: 400;
-	line-height: normal;
+	line-height: normal;	
 	text-decoration: underline hsla(15, 87%, 55%, 0.5);
+	display: inline-block;
 	@media (max-width: 600px) {
 		font-size: 20px;
 	}

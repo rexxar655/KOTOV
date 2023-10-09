@@ -115,8 +115,8 @@
 		display: flex;
 		flex-direction: column;
 		max-width: 420px;
-		
-		background: #FFF;
+		position: relative;
+		background: #fff;
 		color: #191919;
 		font-family: Inter;
 		font-size: 24px;
@@ -138,8 +138,18 @@
 		gap: 25px;
 		padding-bottom: 150px;
 	}
+	&__burger-close {
+		color: #000;
+		font-size: 48px;
+		font-weight: 700;
+		display: flex;
+		width: 33px;
+		position: absolute;
+		top: 16px;
+		right: 20px;
+		cursor: pointer;
+	}
 
-	
 	// .header__link
 	&__link {
 		transition: var(--transition);
@@ -149,14 +159,13 @@
 	&__link:hover {
 		color: var(--color-accent);
 		border-bottom: 1px solid hsla(15, 87%, 55%, 0.5);
-
 	}
 	&__social {
 		display: flex;
 		align-items: center;
 		gap: 25px;
 		padding-top: 25px;
-		a{
+		a {
 			display: flex;
 			align-items: center;
 		}

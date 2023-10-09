@@ -24,7 +24,16 @@
 
 .main__projects {
   padding: 72px 0 86px;
-  background: #F0EEEE;
+  background: #f0eeee;
+}
+
+.main__repairs {
+  padding: 80px 0;
+}
+
+.main__question {
+  background: #f0eeee;
+  padding: 78px 0;
 }
 
 .hero__inner {
@@ -60,7 +69,7 @@
 }
 .hero__text {
   color: #000;
-  padding-bottom: 48px;
+  margin-bottom: 48px;
   text-decoration: none;
 }
 .hero__btn {
@@ -164,6 +173,9 @@
   .tabs-content__top {
     display: none;
   }
+}
+.tabs-content__link {
+  color: var(--color-accent);
 }
 @media (max-width: 900px) {
   .tabs-content__link {
@@ -305,7 +317,7 @@
   position: relative;
 }
 .projects__prev {
-  background: #E5E5E5;
+  background: #e5e5e5;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -319,21 +331,23 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+@media (max-width: 800px) {
+  .projects__prev {
+    display: none;
+  }
 }
 .projects__swiper {
   width: 100%;
 }
-.projects__slide {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  overflow: hidden;
-}
 .projects__slide img {
   width: 100%;
 }
+.projects__slide-foto {
+  display: none;
+}
 .projects__next {
-  background: #E5E5E5;
+  background: #e5e5e5;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -347,6 +361,16 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+@media (max-width: 800px) {
+  .projects__next {
+    background: transparent;
+    position: absolute;
+    z-index: 2;
+    right: -10px;
+    -ms-flex-item-align: center;
+        align-self: center;
+  }
 }
 .projects__bottom {
   display: -webkit-box;
@@ -389,11 +413,16 @@
   background: #fff;
   opacity: 1;
 }
+@media (max-width: 800px) {
+  .projects__pagination {
+    margin-bottom: 20px;
+  }
+}
 .projects__pagination-fractal {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 39px;
+  width: 42px;
   margin-right: 62px;
 }
 @media (max-width: 900px) {
@@ -442,4 +471,105 @@ span.swiper-pagination-bullet-active {
   width: 32px;
   background: var(--color-accent);
   opacity: 1;
+}
+
+.repairs__title {
+  padding-bottom: 32px;
+}
+.repairs__top {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 102px;
+}
+@media (max-width: 1000px) {
+  .repairs__top {
+    gap: 50px;
+  }
+}
+@media (max-width: 600px) {
+  .repairs__top {
+    gap: 0;
+    grid-template-columns: 1fr;
+  }
+}
+.repairs__top-text {
+  padding-bottom: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.repairs__top-text span {
+  color: var(--color-footer);
+  font-size: 36px;
+}
+@media (max-width: 700px) {
+  .repairs__top-text span {
+    padding-top: 32px;
+  }
+}
+@media (max-width: 700px) {
+  .repairs__top-text {
+    padding-bottom: 35px;
+  }
+}
+.repairs__content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 70px 102px;
+  padding-top: 80px;
+}
+@media (max-width: 1000px) {
+  .repairs__content {
+    gap: 50px 50px;
+  }
+}
+@media (max-width: 700px) {
+  .repairs__content {
+    gap: 66px;
+    grid-template-columns: 1fr;
+  }
+}
+
+.block__img {
+  margin-bottom: 24px;
+  width: 100%;
+}
+.block__title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: var(--color-footer);
+  text-decoration: none;
+  padding-bottom: 20px;
+}
+@media (max-width: 900px) {
+  .block__title {
+    font-size: 20px;
+  }
+}
+.block__text {
+  padding-bottom: 24px;
+  color: var(--color-second-text);
+  line-height: 1.5;
+}
+.block__link {
+  color: var(--color-accent);
+  border-bottom: 1px solid hsla(15, 87%, 55%, 0.5);
+}
+
+.question__title {
+  -webkit-text-decoration: underline hsla(15, 87%, 55%, 0.5);
+          text-decoration: underline hsla(15, 87%, 55%, 0.5);
+  color: var(--color-accent);
+  display: inline-block;
 }
