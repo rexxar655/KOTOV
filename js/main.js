@@ -72,7 +72,7 @@
 		const tabContent = document.querySelector(tabContentId)
 		const activeControl = document.querySelector('.tabs__link--activ')
 		const activeContent = document.querySelector('.tabs-content--show')
-
+		console.log(tabContentId)
 		if (activeContent) activeContent.classList.remove('tabs-content--show')
 		if (activeControl) activeControl.classList.remove('tabs__link--activ')
 
@@ -113,13 +113,16 @@
 	const projectsSwiper = new Swiper('.projects__swiper', {
 		// Optional parameters
 		slidesPerView: 1,
-		
+
 
 		// If we need pagination
 		pagination: {
 			el: '.projects__pagination-fractal',
 			type: 'fraction',
-
+			clickable: true,
+			renderBullet: function (index, className) {
+				return '<span class="' + className + '">' + (index + 1) + '</span>';
+			},
 		},
 
 		// Navigation arrows
@@ -128,10 +131,11 @@
 			prevEl: '.projects__prev',
 		},
 
+
 	});
 	const pagingSwiper = new Swiper(".projects__swiper", {
 		pagination: {
-			el: ".projects__pagination",			
+			el: ".projects__pagination",
 
 		},
 	});
@@ -139,6 +143,54 @@
 	projectsSwiper.controller.control = pagingSwiper;
 
 
+	// ===============================projects tabs==============
+	
+	const tabProjects = document.querySelector('.projects__nav-tabs')
+	
+	tabProjects.addEventListener('click', toogleTabProjects)
+	
+	function toogleTabProjects(e) {
+		const tabProjects = e.target.closest('.projects__link')
+	
+		if (!tabProjects) return
+		e.preventDefault()
+		if (tabProjects.classList.contains('projects__tab--active')) return
+	
+		const tabContentId = tabProjects.getAttribute('href')
+		const tabContent = document.querySelector(tabContentId)
+		const activeControl = document.querySelector('.projects__tab--active')
+		const activeContent = document.querySelector('.projects__tab--show')
+	
+		
+		if (activeContent) activeContent.classList.remove('projects__tab--show')
+		if (activeControl) activeControl.classList.remove('projects__tab--active')
+		
+		tabContent.classList.add('projects__tab--show')
+		tabProjects.classList.add('projects__tab--active')
+	}
+
+
+// ===========================================tabs to slide============
+
+	projectsSwiper.on('slideChange', function () {
+		let i = this.realIndex + 1;
+	
+
+		const tabContentId = "#tab_" + i
+		const tabContent = document.querySelector(tabContentId)
+		const activeControl = document.querySelector('.projects__tab--active')
+		const activeContent = document.querySelector('.projects__tab--show')
+		// console.log(tabContentId)
+	
+		
+		if (activeContent) activeContent.classList.remove('projects__tab--show')
+		if (activeControl) activeControl.classList.remove('projects__tab--active')
+		
+		tabContent.classList.add('projects__tab--show')
+		tabProjects.classList.add('projects__tab--active')
+	});
+
+	// ===================================================
 
 	// 	// ==============slider comment====================
 

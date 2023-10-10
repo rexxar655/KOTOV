@@ -343,7 +343,7 @@
 .projects__slide img {
   width: 100%;
 }
-.projects__slide-foto {
+.projects__foto {
   display: none;
 }
 .projects__next {
@@ -471,6 +471,21 @@ span.swiper-pagination-bullet-active {
   width: 32px;
   background: var(--color-accent);
   opacity: 1;
+}
+
+.projects__nav-tabs {
+  display: none;
+}
+.projects__tab-pane {
+  display: none;
+}
+.projects__tab--active {
+  color: var(--color-accent);
+}
+.projects__tab--show {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .repairs__title {

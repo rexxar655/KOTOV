@@ -379,7 +379,7 @@
 
 	// .projects__scrollbar
 
-	&__slide-foto {
+	&__foto {
 		display: none;
 	}
 
@@ -499,6 +499,56 @@ span.swiper-pagination-bullet-active {
 	background: var(--color-accent);
 	opacity: 1;
 }
+
+.projects {
+
+	// .projects__nav-tabs
+
+	&__nav-tabs {
+		display: none;
+	}
+
+	// .projects__tab-content
+
+	&__tab-content {
+	}
+
+	// .projects__tab-pane
+
+	&__tab-pane {
+		display: none;
+	}
+
+	// .projects__tab-active
+
+	&__tab--active {
+		color: var(--color-accent);
+	}
+
+	// .projects__bottom-content
+
+	&__bottom-content {
+	}
+
+	// .projects__bottom-text
+
+	&__bottom-text {
+	}
+
+	// .projects__specification
+
+	&__specification {
+	}
+
+	// .projects__specification-text
+
+	&__specification-text {
+	}
+}
+.projects__tab--show{
+	display: flex;
+}
+
 
 .repairs {
 	// .repairs__inner
