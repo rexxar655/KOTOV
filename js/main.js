@@ -1,7 +1,7 @@
-; (function () {
+;(function () {
 	// // =================================BURGER================================
 
-	; (function () {
+	;(function () {
 		document.addEventListener('click', burgerinit)
 		function burgerinit(e) {
 			const burger = e.target.closest('.header__menu')
@@ -82,7 +82,6 @@
 
 	// 	// =================================ACCORDION============================
 
-
 	let accordion = document.querySelector('.accordion')
 	let items = accordion.querySelectorAll('.accordion__item')
 	let title = accordion.querySelectorAll('.accordion__title')
@@ -103,17 +102,11 @@
 
 	title.forEach(question => question.addEventListener('click', toggleAccordion))
 
-
-
-
 	// 	// ========================projects SLIDER============================
-
-
 
 	const projectsSwiper = new Swiper('.projects__swiper', {
 		// Optional parameters
 		slidesPerView: 1,
-
 
 		// If we need pagination
 		pagination: {
@@ -121,7 +114,7 @@
 			type: 'fraction',
 			clickable: true,
 			renderBullet: function (index, className) {
-				return '<span class="' + className + '">' + (index + 1) + '</span>';
+				return '<span class="' + className + '">' + (index + 1) + '</span>'
 			},
 		},
 
@@ -130,67 +123,60 @@
 			nextEl: '.projects__next',
 			prevEl: '.projects__prev',
 		},
-
-
-	});
-	const pagingSwiper = new Swiper(".projects__swiper", {
+	})
+	const pagingSwiper = new Swiper('.projects__swiper', {
 		pagination: {
-			el: ".projects__pagination",
-
+			el: '.projects__pagination',
 		},
-	});
+	})
 
-	projectsSwiper.controller.control = pagingSwiper;
+	projectsSwiper.controller.control = pagingSwiper
 
-
-	// ===============================projects tabs==============
-	
-	const tabProjects = document.querySelector('.projects__nav-tabs')
-	
-	tabProjects.addEventListener('click', toogleTabProjects)
-	
-	function toogleTabProjects(e) {
-		const tabProjects = e.target.closest('.projects__link')
-	
-		if (!tabProjects) return
-		e.preventDefault()
-		if (tabProjects.classList.contains('projects__tab--active')) return
-	
-		const tabContentId = tabProjects.getAttribute('href')
-		const tabContent = document.querySelector(tabContentId)
-		const activeControl = document.querySelector('.projects__tab--active')
-		const activeContent = document.querySelector('.projects__tab--show')
-	
-		
-		if (activeContent) activeContent.classList.remove('projects__tab--show')
-		if (activeControl) activeControl.classList.remove('projects__tab--active')
-		
-		tabContent.classList.add('projects__tab--show')
-		tabProjects.classList.add('projects__tab--active')
-	}
-
-
-// ===========================================tabs to slide============
+	// ===========================================projects-tabs to slide============
 
 	projectsSwiper.on('slideChange', function () {
-		let i = this.realIndex + 1;
-	
+		let i = this.realIndex + 1
 
-		const tabContentId = "#tab_" + i
+		const tabContentId = '#tab_' + i
 		const tabContent = document.querySelector(tabContentId)
 		const activeControl = document.querySelector('.projects__tab--active')
 		const activeContent = document.querySelector('.projects__tab--show')
 		// console.log(tabContentId)
-	
-		
+
 		if (activeContent) activeContent.classList.remove('projects__tab--show')
 		if (activeControl) activeControl.classList.remove('projects__tab--active')
-		
-		tabContent.classList.add('projects__tab--show')
-		tabProjects.classList.add('projects__tab--active')
-	});
 
-	// ===================================================
+		tabContent.classList.add('projects__tab--show')
+		
+	})
+
+	// ============================clients__swiper=======================
+
+	const clientsSwiper = new Swiper('.clients__swiper', {
+		// Optional parameters
+
+		breakpoints: {
+			// when window width is >= 450px
+			0: {
+				slidesPerView: 1,
+				spaceBetween: 0,
+			},
+			450: {
+				slidesPerView: 1.2,
+				spaceBetween: 8,
+			},
+
+			601: {
+				slidesPerView: 1.5,
+				spaceBetween: 20,
+			},
+
+			920: {
+				slidesPerView: 2.2,
+				spaceBetween: 32,
+			},
+		},
+	})
 
 	// 	// ==============slider comment====================
 
@@ -230,6 +216,4 @@
 	// 		}
 
 	// 	});
-
-
 })()
