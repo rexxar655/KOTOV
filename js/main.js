@@ -1,7 +1,7 @@
-;(function () {
+; (function () {
 	// // =================================BURGER================================
 
-	;(function () {
+	; (function () {
 		document.addEventListener('click', burgerinit)
 		function burgerinit(e) {
 			const burger = e.target.closest('.header__menu')
@@ -147,7 +147,7 @@
 		if (activeControl) activeControl.classList.remove('projects__tab--active')
 
 		tabContent.classList.add('projects__tab--show')
-		
+
 	})
 
 	// ============================clients__swiper=======================
@@ -178,42 +178,149 @@
 		},
 	})
 
-	// 	// ==============slider comment====================
 
-	// 	new Swiper('.comment__slider', {
-	// 		// Optional parameters
-	// 		spaceBetween: 0,
-	// 		slidesPerView: 2,
-	// 		centeredSlides: true,
-	// 		loop: true,
 
-	// 		// Navigation arrows
-	// 		navigation: {
-	// 			nextEl: '.comment__next',
-	// 			prevEl: '.comment__prev',
-	// 		},
 
-	// 		scrollbar: {
-	// 			el: '.swiper-scrollbar',
 
-	// 		},
-	// 		breakpoints: {
-	// 			// when window width is >= 450px
-	// 			0: {
-	// 				slidesPerView: 1,
-	// 				spaceBetween: 0,
-	// 			},
+	// ==============================tabs order==================================
 
-	// 			901: {
-	// 				slidesPerView: 1.5,
-	// 				spaceBetween: 0,
-	// 			},
+	const tabOrder = document.querySelectorAll('.order__slide-nav')
 
-	// 			1201: {
-	// 				slidesPerView: 2,
-	// 				spaceBetween: 0,
-	// 			}
-	// 		}
+	tabOrder.forEach(e => {
+		e.addEventListener('click', toogleTabOrder)
+	})
 
-	// 	});
+	function toogleTabOrder(e) {
+		const tabOrder = e.target.closest('.order__nav-link')
+
+		if (!tabOrder) return
+		e.preventDefault()
+		if (tabOrder.classList.contains('order__nav-link--activ')) return
+
+		const tabContentId = tabOrder.getAttribute('href')
+		const tabContent = document.querySelector(tabContentId)
+		const activeControl = document.querySelector('.order__nav-link--activ')
+		const activeContent = document.querySelector('.order__content--show')
+
+		if (activeContent) activeContent.classList.remove('order__content--show')
+		if (activeControl) activeControl.classList.remove('order__nav-link--activ')
+
+		tabContent.classList.add('order__content--show')
+		tabOrder.classList.add('order__nav-link--activ')
+	}
+
+
+
+
+
+	// 	// ==============slider orders====================
+
+	const swiperOrder = new Swiper('.order__swiper', {
+		// Optional parameters
+		slidesPerView: 1,
+
+		// Navigation arrows
+		navigation: {
+			nextEl: '.order__slide-next',
+			prevEl: '.order__slide-prev',
+		},
+
+
+	});
+
+
+	// ===========================orders tab=====================
+
+
+	const ordersTabControl = document.querySelector('.order__tabs')
+
+	ordersTabControl.addEventListener('click', toogleOrdersTab)
+
+	function toogleOrdersTab(e) {
+		const ordersTabControl = e.target.closest('.order__tabs-link')
+
+		if (!ordersTabControl) return
+		e.preventDefault()
+		if (ordersTabControl.classList.contains('order__tabs-link--activ')) return
+
+		const tabContentId = ordersTabControl.getAttribute('href')
+		const tabContent = document.querySelector(tabContentId)
+		const activeControl = document.querySelector('.order__tabs-link--activ')
+		const activeContent = document.querySelector('.order__tabs-content--show')
+
+		if (activeContent) activeContent.classList.remove('order__tabs-content--show')
+		if (activeControl) activeControl.classList.remove('order__tabs-link--activ')
+
+		tabContent.classList.add('order__tabs-content--show')
+		ordersTabControl.classList.add('order__tabs-link--activ')
+	}
+
+
+	// ===============================select accent=========================
+
+	// ==============form_one=====
+	const form_one = document.querySelectorAll('.form_one')
+
+	form_one.forEach(e => {
+		e.addEventListener('click', toogleForm_one)
+	})
+
+	function toogleForm_one(e) {
+		const form_one = e.target.closest('.select__btns-link')
+
+		if (!form_one) return
+		e.preventDefault()
+		if (form_one.classList.contains('form_one--activ')) return
+
+		const activeControl = document.querySelector('.form_one--activ')
+
+		if (activeControl) activeControl.classList.remove('form_one--activ')
+
+		form_one.classList.add('form_one--activ')
+	}
+
+	// ==============form_two=====
+	const form_two = document.querySelectorAll('.form_two')
+
+	form_two.forEach(e => {
+		e.addEventListener('click', toogleForm_two)
+	})
+
+	function toogleForm_two(e) {
+		const form_two = e.target.closest('.select__btns-link')
+
+		if (!form_two) return
+		e.preventDefault()
+		if (form_two.classList.contains('form_two--activ')) return
+
+		const activeControl = document.querySelector('.form_two--activ')
+
+		if (activeControl) activeControl.classList.remove('form_two--activ')
+
+		form_two.classList.add('form_two--activ')
+	}
+
+	// ==============form_three=====
+	const form_three = document.querySelectorAll('.form_three')
+
+	form_three.forEach(e => {
+		e.addEventListener('click', toogleForm_three)
+	})
+
+	function toogleForm_three(e) {
+		const form_three = e.target.closest('.select__btns-link')
+
+		if (!form_three) return
+		e.preventDefault()
+		if (form_three.classList.contains('form_three--activ')) return
+
+		const activeControl = document.querySelector('.form_three--activ')
+
+		if (activeControl) activeControl.classList.remove('form_three--activ')
+
+		form_three.classList.add('form_three--activ')
+	}
+
+
+
 })()

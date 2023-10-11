@@ -115,7 +115,7 @@ h1 {
   overflow: hidden;
 }
 
-.modal-call {
+.forma {
   position: fixed;
   inset: 0;
   z-index: 12;
@@ -134,7 +134,7 @@ h1 {
   -webkit-transition: var(--transition);
   transition: var(--transition);
 }
-.modal-call__window {
+.forma__window {
   max-width: 650px;
   position: relative;
   padding: 74px 84px 115px 87px;
@@ -148,17 +148,17 @@ h1 {
   background: var(--color-wite);
 }
 @media (max-width: 600px) {
-  .modal-call__window {
+  .forma__window {
     padding: 74px 50px 50px;
     margin: 10px;
   }
 }
 @media (max-width: 400px) {
-  .modal-call__window {
+  .forma__window {
     padding: 74px 20px 20px;
   }
 }
-.modal-call__close-btn {
+.forma__close-btn {
   color: #000;
   font-size: 48px;
   font-weight: 700;
@@ -171,11 +171,11 @@ h1 {
   right: 32px;
   cursor: pointer;
 }
-.modal-call__title {
+.forma__title {
   color: var(--color-accent);
   padding-bottom: 64px;
 }
-.modal-call__lable input {
+.forma__lable input {
   border-bottom: 1px solid rgba(153, 153, 153, 0.5019607843);
   -webkit-transition: var(--transition);
   transition: var(--transition);
@@ -183,17 +183,17 @@ h1 {
   font-size: 24px;
   width: 100%;
 }
-.modal-call__lable input:hover {
+.forma__lable input:hover {
   border-bottom: 1px solid hsla(15, 87%, 55%, 0.5);
 }
-.modal-call__lable input:focus {
+.forma__lable input:focus {
   border-bottom: 1px solid hsla(15, 87%, 55%, 0.5);
 }
-.modal-call__lable p {
+.forma__lable p {
   padding-bottom: 18px;
   line-height: 1.5;
 }
-.modal-call__lable span {
+.forma__lable span {
   display: block;
   color: var(--color-second-text);
   font-family: Inter;
@@ -204,16 +204,16 @@ h1 {
   margin-top: -52px;
   padding-bottom: 64px;
 }
-.modal-call__btn {
+.forma__btn {
   background: var(--color-second-text);
   color: var(--color-wite);
   margin-bottom: 32px;
 }
-.modal-call__text p {
+.forma__text p {
   color: var(--color-second-text);
   line-height: 1.5; /* 150% */
 }
-.modal-call__text a {
+.forma__text a {
   color: var(--color-accent);
   line-height: 1.5;
 }
