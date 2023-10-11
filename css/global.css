@@ -189,7 +189,7 @@ h1 {
 .forma__lable input:focus {
   border-bottom: 1px solid hsla(15, 87%, 55%, 0.5);
 }
-.forma__lable p {
+.forma__lable a {
   padding-bottom: 18px;
   line-height: 1.5;
 }

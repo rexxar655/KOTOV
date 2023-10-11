@@ -182,9 +182,9 @@
 
 
 
-	// ==============================tabs order==================================
+	// ==============================main tabs order==================================
 
-	const tabOrder = document.querySelectorAll('.order__slide-nav')
+	const tabOrder = document.querySelectorAll('.order__nav')
 
 	tabOrder.forEach(e => {
 		e.addEventListener('click', toogleTabOrder)
@@ -210,23 +210,6 @@
 	}
 
 
-
-
-
-	// 	// ==============slider orders====================
-
-	const swiperOrder = new Swiper('.order__swiper', {
-		// Optional parameters
-		slidesPerView: 1,
-
-		// Navigation arrows
-		navigation: {
-			nextEl: '.order__slide-next',
-			prevEl: '.order__slide-prev',
-		},
-
-
-	});
 
 
 	// ===========================orders tab=====================

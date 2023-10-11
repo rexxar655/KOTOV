@@ -78,7 +78,7 @@ h1 {
 	font-size: 24px;
 	font-style: normal;
 	font-weight: 400;
-	line-height: normal;	
+	line-height: normal;
 	text-decoration: underline hsla(15, 87%, 55%, 0.5);
 	display: inline-block;
 	@media (max-width: 600px) {
@@ -145,8 +145,6 @@ h1 {
 
 	// .modal-call__form
 
-	
-
 	// .modal-call__lable
 
 	&__lable {
@@ -163,7 +161,7 @@ h1 {
 		input:focus {
 			border-bottom: 1px solid hsla(15, 87%, 55%, 0.5);
 		}
-		p {
+		a {
 			padding-bottom: 18px;
 			line-height: 1.5;
 		}
@@ -179,7 +177,6 @@ h1 {
 			padding-bottom: 64px;
 		}
 	}
-
 
 	&__btn {
 		background: var(--color-second-text);
