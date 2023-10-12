@@ -107,6 +107,26 @@ h1 {
   }
 }
 
+input::-webkit-input-placeholder {
+  color: var(--color-second-text);
+}
+
+input::-moz-placeholder {
+  color: var(--color-second-text);
+}
+
+input:-ms-input-placeholder {
+  color: var(--color-second-text);
+}
+
+input::-ms-input-placeholder {
+  color: var(--color-second-text);
+}
+
+input::placeholder {
+  color: var(--color-second-text);
+}
+
 .body--opened-menu {
   overflow: hidden;
 }
@@ -115,7 +135,7 @@ h1 {
   overflow: hidden;
 }
 
-.forma {
+.modal-call {
   position: fixed;
   inset: 0;
   z-index: 12;
@@ -134,7 +154,7 @@ h1 {
   -webkit-transition: var(--transition);
   transition: var(--transition);
 }
-.forma__window {
+.modal-call__window {
   max-width: 650px;
   position: relative;
   padding: 74px 84px 115px 87px;
@@ -148,17 +168,17 @@ h1 {
   background: var(--color-wite);
 }
 @media (max-width: 600px) {
-  .forma__window {
+  .modal-call__window {
     padding: 74px 50px 50px;
     margin: 10px;
   }
 }
 @media (max-width: 400px) {
-  .forma__window {
+  .modal-call__window {
     padding: 74px 20px 20px;
   }
 }
-.forma__close-btn {
+.modal-call__close-btn {
   color: #000;
   font-size: 48px;
   font-weight: 700;
@@ -171,29 +191,25 @@ h1 {
   right: 32px;
   cursor: pointer;
 }
-.forma__title {
+.modal-call__title {
   color: var(--color-accent);
-  padding-bottom: 64px;
+  padding-bottom: 80px;
 }
-.forma__lable input {
+.modal-call__lable input {
   border-bottom: 1px solid rgba(153, 153, 153, 0.5019607843);
   -webkit-transition: var(--transition);
   transition: var(--transition);
-  margin-bottom: 64px;
+  margin-bottom: 80px;
   font-size: 24px;
   width: 100%;
 }
-.forma__lable input:hover {
+.modal-call__lable input:hover {
   border-bottom: 1px solid hsla(15, 87%, 55%, 0.5);
 }
-.forma__lable input:focus {
+.modal-call__lable input:focus {
   border-bottom: 1px solid hsla(15, 87%, 55%, 0.5);
 }
-.forma__lable a {
-  padding-bottom: 18px;
-  line-height: 1.5;
-}
-.forma__lable span {
+.modal-call__lable span {
   display: block;
   color: var(--color-second-text);
   font-family: Inter;
@@ -204,16 +220,17 @@ h1 {
   margin-top: -52px;
   padding-bottom: 64px;
 }
-.forma__btn {
+.modal-call__btn {
   background: var(--color-second-text);
   color: var(--color-wite);
   margin-bottom: 32px;
 }
-.forma__text p {
+.modal-call__text p {
   color: var(--color-second-text);
-  line-height: 1.5; /* 150% */
+  line-height: 1.5;
+  /* 150% */
 }
-.forma__text a {
+.modal-call__text a {
   color: var(--color-accent);
   line-height: 1.5;
 }

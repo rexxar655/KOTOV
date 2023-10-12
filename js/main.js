@@ -5,8 +5,9 @@
 		document.addEventListener('click', burgerinit)
 		function burgerinit(e) {
 			const burger = e.target.closest('.header__menu')
-			const link = e.target.closest('.link')
-			if (!burger && !link) return
+			const close = e.target.closest('.burger-close')
+
+			if (!burger && !close) return
 			// if (document.documentElement.clientWidth > 900) return
 
 			if (!document.body.classList.contains('body--opened-menu')) {
@@ -14,6 +15,21 @@
 			} else {
 				document.body.classList.remove('body--opened-menu')
 			}
+
+			document.addEventListener('mouseup', function (e) {
+				if (!(e.target.classList.contains('header__menu')) &&
+					!(e.target.classList.contains('header__burger')) &&
+					!(e.target.classList.contains('header__nav-burger')) &&
+					!(e.target.classList.contains('header__item')) &&
+					!(e.target.classList.contains('header__menu-text')) &&
+					!(e.target.classList.contains('burger-close')) &&
+					!(e.target.classList.contains('header__social')) &&
+					!(e.target.classList.contains('header__social-link')) &&
+					!(e.target.classList.contains('header__link'))
+				) {
+					document.body.classList.remove('body--opened-menu')
+				}
+			})
 		}
 	})()
 

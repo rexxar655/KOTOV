@@ -7,6 +7,7 @@
 	--color-wite: #fff;
 	--transition: all 0.4s;
 }
+
 html {
 	scroll-behavior: smooth;
 	scroll-padding-top: 10vh;
@@ -29,6 +30,7 @@ h1 {
 	font-weight: 700;
 	line-height: normal;
 }
+
 .wrapper {
 	min-height: 100%;
 	width: 100%;
@@ -61,6 +63,7 @@ h1 {
 	font-weight: 400;
 	line-height: normal;
 }
+
 .title {
 	color: #191919;
 	font-family: Inter;
@@ -68,10 +71,12 @@ h1 {
 	font-style: normal;
 	font-weight: 700;
 	line-height: normal;
+
 	@media (max-width: 600px) {
 		font-size: 30px;
 	}
 }
+
 .accent-text {
 	color: #f05a26;
 	font-family: Inter;
@@ -81,18 +86,24 @@ h1 {
 	line-height: normal;
 	text-decoration: underline hsla(15, 87%, 55%, 0.5);
 	display: inline-block;
+
 	@media (max-width: 600px) {
 		font-size: 20px;
 	}
 }
+input::placeholder{
+	color: var(--color-second-text);
+}
+
 .body--opened-menu {
 	overflow: hidden;
 }
+
 .body--modal-opened {
 	overflow: hidden;
 }
 
-.forma {
+.modal-call {
 	position: fixed;
 	inset: 0;
 	z-index: 12;
@@ -113,10 +124,12 @@ h1 {
 		display: flex;
 		flex-direction: column;
 		background: var(--color-wite);
+
 		@media (max-width: 600px) {
 			padding: 74px 50px 50px;
 			margin: 10px;
 		}
+
 		@media (max-width: 400px) {
 			padding: 74px 20px 20px;
 		}
@@ -140,7 +153,7 @@ h1 {
 
 	&__title {
 		color: var(--color-accent);
-		padding-bottom: 64px;
+		padding-bottom: 80px;
 	}
 
 	// .modal-call__form
@@ -151,20 +164,19 @@ h1 {
 		input {
 			border-bottom: 1px solid #99999980;
 			transition: var(--transition);
-			margin-bottom: 64px;
+			margin-bottom: 80px;
 			font-size: 24px;
 			width: 100%;
 		}
+
 		input:hover {
 			border-bottom: 1px solid hsla(15, 87%, 55%, 0.5);
 		}
+
 		input:focus {
 			border-bottom: 1px solid hsla(15, 87%, 55%, 0.5);
 		}
-		a {
-			padding-bottom: 18px;
-			line-height: 1.5;
-		}
+
 		span {
 			display: block;
 			color: var(--color-second-text);
@@ -189,14 +201,17 @@ h1 {
 	&__text {
 		p {
 			color: var(--color-second-text);
-			line-height: 1.5; /* 150% */
+			line-height: 1.5;
+			/* 150% */
 		}
+
 		a {
 			color: var(--color-accent);
 			line-height: 1.5;
 		}
 	}
 }
+
 .body--modal-opened .modal-call {
 	opacity: 1;
 	visibility: visible;

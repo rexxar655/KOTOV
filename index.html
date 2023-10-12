@@ -17,50 +17,50 @@
 						<div class="header__nav">
 							<div class="header__shadow">
 								<div class="header__burger">
-									<div class="header__burger-close link">×</div>
+									<div class="header__burger-close burger-close">×</div>
 									<ul class="header__nav-burger">
 										<li class="header__item">
-											<a href="/" class="header__link link">Главная</a>
+											<a href="/" class="header__link burger-close">Главная</a>
 										</li>
 										<li class="header__item">
-											<a href="#advantages" class="header__link link">О нас</a>
+											<a href="#advantages" class="header__link burger-close">О нас</a>
 										</li>
 										<li class="header__item">
-											<a href="#projects" class="header__link link"
+											<a href="#projects" class="header__link burger-close"
 												>Наши проекты</a
 											>
 										</li>
 										<li class="header__item">
-											<a href="#repairs" class="header__link link"
+											<a href="#repairs" class="header__link burger-close"
 												>Цены на ремонт</a
 											>
 										</li>
 										<li class="header__item">
-											<a href="#clients" class="header__link link"
+											<a href="#clients" class="header__link burger-close"
 												>Отзывы клиентов</a
 											>
 										</li>
 										<li class="header__item">
-											<a href="#order" class="header__link link"
+											<a href="#order" class="header__link burger-close"
 												>Расчет стоимости
 											</a>
 										</li>
 										<li class="header__item">
-											<a href="#footer" class="header__link link">Контакты</a>
+											<a href="#footer" class="header__link burger-close">Контакты</a>
 										</li>
 									</ul>
-									<p>Задать вопрос</p>
-									<div class="header__social link">
-										<a href="#">
+									<p class="header__menu-text">Задать вопрос</p>
+									<div class="header__social">
+										<a class="header__social-link" target="_blank" href="#">
 											<img src="img/icons/instagram.svg" alt="" />
 										</a>
-										<a href="#">
+										<a class="header__social-link" target="_blank" href="#">
 											<img src="img/icons/vk.svg" alt="" />
 										</a>
-										<a href="#">
+										<a class="header__social-link" target="_blank" href="#">
 											<img src="img/icons/facebook.svg" alt="" />
 										</a>
-										<a href="#">
+										<a class="header__social-link" target="_blank" href="#">
 											<img src="img/icons/odnoklasniki.svg" alt="" />
 										</a>
 									</div>
@@ -1246,16 +1246,16 @@
 									<div class="estimate__form">
 										<form class="estimate__form">
 											<label class="estimate__lable">
-												<a>Имя</a>
-												<input class="estimate__name" type="text" name="name" />
+												
+												<input placeholder="Имя" class="estimate__name" type="text" name="name" />
 											</label>
 											<label class="estimate__lable">
-												<a>Телефон</a>
-												<input class="estimate__tel" type="tel" name="tel" />
+												
+												<input placeholder="Телефон" class="estimate__tel" type="tel" name="tel" />
 											</label>
 											<label class="estimate__lable">
-												<a>Электронная почта</a>
-												<input
+												
+												<input placeholder="Электронная почта"
 													class="estimate__time"
 													type="email"
 													name="email"
@@ -1411,41 +1411,41 @@
 			</footer>
 		</div>
 
-		<div class="modal-call forma">
-			<div class="modal-call__window forma__window">
-				<a class="modal-call__close-btn forma__close-btn" id="close"> × </a>
+		<div class="modal-call ">
+			<div class="modal-call__window ">
+				<a class="modal-call__close-btn " id="close"> × </a>
 
-				<h2 class="modal-call__title title forma__title">Заказать звонок</h2>
+				<h2 class="modal-call__title title ">Заказать звонок</h2>
 
-				<form class="modal-call__form forma__form">
-					<label class="modal-call__lable forma__lable">
-						<a>Имя</a>
-						<input
-							class="modal-call__name forma__name"
+				<form class="modal-call__form ">
+					<label class="modal-call__lable ">
+						
+						<input placeholder="Имя"
+							class="modal-call__name"
 							type="text"
 							name="name"
 						/>
 					</label>
-					<label class="modal-call__lable forma__lable">
-						<a>Телефон</a>
-						<input class="modal-call__tel forma__tel" type="tel" name="tel" />
+					<label class="modal-call__lable ">
+						
+						<input placeholder="Телефон" class="modal-call__tel " type="tel" name="tel" />
 					</label>
-					<label class="modal-call__lable forma__lable">
-						<a>Удобное время для звонка</a>
-						<input
-							class="modal-call__time forma__time"
+					<label class="modal-call__lable ">
+						
+						<input placeholder="Удобное время для звонка"
+							class="modal-call__time "
 							type="text"
 							name="time"
 						/>
-						<span class="modal-call__lable-timetocall forma__lable-timetocall"
+						<span class="modal-call__lable-timetocall "
 							>Мы можем перезвонить в любой день с 9:00 до 22:00</span
 						>
 					</label>
 
-					<button class="modal-call__btn btn forma__btn" type="submit">
+					<button class="modal-call__btn btn " type="submit">
 						Отправить
 					</button>
-					<div class="modal-call__text forma__text">
+					<div class="modal-call__text ">
 						<p>Нажимая на кнопку, вы соглашаетесь с политикой</p>
 						<a href="#" target="_blank">защиты персональной информации.</a>
 					</div>

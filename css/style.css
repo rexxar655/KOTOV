@@ -924,12 +924,21 @@ span.swiper-pagination-bullet-active {
 .estimate__calculation-link {
   margin-bottom: 66px;
 }
+.estimate__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
 .estimate__lable input {
   background: transparent;
   border-bottom: 1px solid rgba(153, 153, 153, 0.5019607843);
   -webkit-transition: var(--transition);
   transition: var(--transition);
-  margin-bottom: 64px;
+  margin-bottom: 80px;
   font-size: 24px;
   max-width: 478px;
   width: 100%;
@@ -939,11 +948,6 @@ span.swiper-pagination-bullet-active {
 }
 .estimate__lable input:focus {
   border-bottom: 1px solid hsla(15, 87%, 55%, 0.5);
-}
-.estimate__lable a {
-  display: block;
-  padding-bottom: 18px;
-  line-height: 1.5;
 }
 .estimate__lable span {
   display: block;
