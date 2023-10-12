@@ -95,6 +95,7 @@
 		font-weight: 400;
 		line-height: normal;
 		transition: var(--transition);
+		cursor: pointer;
 	}
 	&__btn:hover {
 		background-color: var(--color-accent);
