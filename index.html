@@ -15,40 +15,37 @@
 				<div class="container">
 					<div class="header__inner">
 						<div class="header__nav">
-							<div class="header__shadow">
+							<div class="burger-menu">
 								<div class="header__burger">
-									<div class="header__burger-close burger-close">×</div>
-									<ul class="header__nav-burger">
-										<li class="header__item">
-											<a href="/" class="header__link burger-close">Главная</a>
-										</li>
-										<li class="header__item">
-											<a href="#advantages" class="header__link burger-close">О нас</a>
-										</li>
-										<li class="header__item">
-											<a href="#projects" class="header__link burger-close"
-												>Наши проекты</a
-											>
-										</li>
-										<li class="header__item">
-											<a href="#repairs" class="header__link burger-close"
-												>Цены на ремонт</a
-											>
-										</li>
-										<li class="header__item">
-											<a href="#clients" class="header__link burger-close"
+									<div class="header__burger-close burger-btn">×</div>
+
+									<nav class="header__nav-burger">
+										<div class="header__item">
+											<a href="/" class="header__link">Главная</a>
+										</div>
+										<div class="header__item">
+											<a href="#advantages" class="header__link">О нас</a>
+										</div>
+										<div class="header__item">
+											<a href="#projects" class="header__link">Наши проекты</a>
+										</div>
+										<div class="header__item">
+											<a href="#repairs" class="header__link">Цены на ремонт</a>
+										</div>
+										<div class="header__item">
+											<a href="#clients" class="header__link"
 												>Отзывы клиентов</a
 											>
-										</li>
-										<li class="header__item">
-											<a href="#order" class="header__link burger-close"
+										</div>
+										<div class="header__item">
+											<a href="#order" class="header__link"
 												>Расчет стоимости
 											</a>
-										</li>
-										<li class="header__item">
-											<a href="#footer" class="header__link burger-close">Контакты</a>
-										</li>
-									</ul>
+										</div>
+										<div class="header__item">
+											<a href="#footer" class="header__link">Контакты</a>
+										</div>
+									</nav>
 									<p class="header__menu-text">Задать вопрос</p>
 									<div class="header__social">
 										<a class="header__social-link" target="_blank" href="#">
@@ -65,43 +62,45 @@
 										</a>
 									</div>
 								</div>
-							</div>
-							<div class="header__menu-mobile">
-								<a class="header__tel-mobile modal-open">
-									<svg
-										xmlns="http://www.w3.org/2000/svg"
-										width="24"
-										height="24"
-										viewBox="0 0 24 24"
-										fill="none"
-									>
-										<path
-											fill-rule="evenodd"
-											clip-rule="evenodd"
-											d="M24 19.2H23.9999V14.4H16.7999L15.2581 17.0982C11.672 15.2606 8.73933 12.328 6.90176 8.74185L9.6 7.2V0H4.8H0C0 13.254 10.7459 23.9999 23.9999 24H23.9999H24V19.2Z"
-											fill="#F05A26"
-										/>
-										<path
-											fill-rule="evenodd"
-											clip-rule="evenodd"
-											d="M14.3999 0H23.9999V7.2H16.7999L14.3999 9.60003V7.2V6.00002V0Z"
-											fill="#191919"
-										/>
-									</svg>
-								</a>
-								<a class="header__menu">
-									<svg
-										xmlns="http://www.w3.org/2000/svg"
-										width="32"
-										height="20"
-										viewBox="0 0 32 20"
-										fill="none"
-									>
-										<path d="M0 0H32V4H0V0Z" fill="#F05A26" />
-										<rect y="8" width="32" height="4" fill="#F05A26" />
-										<rect y="16" width="32" height="4" fill="#F05A26" />
-									</svg>
-								</a>
+								<div class="burger-menu_overlay"></div>
+
+								<div class="header__menu-mobile">
+									<a class="header__tel-mobile modal-open">
+										<svg
+											xmlns="http://www.w3.org/2000/svg"
+											width="24"
+											height="24"
+											viewBox="0 0 24 24"
+											fill="none"
+										>
+											<path
+												fill-rule="evenodd"
+												clip-rule="evenodd"
+												d="M24 19.2H23.9999V14.4H16.7999L15.2581 17.0982C11.672 15.2606 8.73933 12.328 6.90176 8.74185L9.6 7.2V0H4.8H0C0 13.254 10.7459 23.9999 23.9999 24H23.9999H24V19.2Z"
+												fill="#F05A26"
+											/>
+											<path
+												fill-rule="evenodd"
+												clip-rule="evenodd"
+												d="M14.3999 0H23.9999V7.2H16.7999L14.3999 9.60003V7.2V6.00002V0Z"
+												fill="#191919"
+											/>
+										</svg>
+									</a>
+									<a class="header__menu burger-btn">
+										<svg
+											xmlns="http://www.w3.org/2000/svg"
+											width="32"
+											height="20"
+											viewBox="0 0 32 20"
+											fill="none"
+										>
+											<path d="M0 0H32V4H0V0Z" fill="#F05A26" />
+											<rect y="8" width="32" height="4" fill="#F05A26" />
+											<rect y="16" width="32" height="4" fill="#F05A26" />
+										</svg>
+									</a>
+								</div>
 							</div>
 							<a class="header__logo" href="#">
 								<img src="img/icons/logo.svg" alt="" />
@@ -111,7 +110,7 @@
 							<a href="tel:+79277051586" class="header__tel"
 								>+7 927 705-15-86</a
 							>
-							<a class="header__btn btn modal-open" >Заказать звонок</a>
+							<a class="header__btn btn modal-open">Заказать звонок</a>
 						</div>
 					</div>
 				</div>
@@ -1243,30 +1242,46 @@
 											>Скачать пример отчета ↓</a
 										>
 									</div>
-									<div class="estimate__form">
+									<div class="estimate__form" id="estimateForm">
 										<form class="estimate__form">
-											<label class="estimate__lable">
-												
-												<input placeholder="Имя" class="estimate__name" type="text" name="name" />
+											<label class="estimate__lable" for="estimateName">
 											</label>
-											<label class="estimate__lable">
-												
-												<input placeholder="Телефон" class="estimate__tel" type="tel" name="tel" />
+											<input
+												placeholder="Имя"
+												class="estimate__input"
+												type="text"
+												name="name"
+												id="estimateName"
+											/>
+											<label class="estimate__lable" for="estimateTel"> </label>
+											<input
+												placeholder="Телефон"
+												class="estimate__input"
+												type="tel"
+												name="tel"
+												id="estimateTel"
+											/>
+											<label class="estimate__lable _email" for="estimateEmail">
 											</label>
-											<label class="estimate__lable">
-												
-												<input placeholder="Электронная почта"
-													class="estimate__time"
-													type="email"
-													name="email"
-												/>
-											</label>
+											<input
+												placeholder="Электронная почта"
+												class="estimate__input"
+												type="email"
+												name="email"
+												id="estimateEmail"
+											/>
 											<div class="estimate__download">
-												<a href="#">
-													<h3 class="estimate__download-title accent-text">
+												<div class="estimate__download-input">
+													<input
+														accept=".txt"
+														type="file"
+														id="estimateFile"
+														name="estimateFile"
+													/>
+													<a class="estimate__download-title accent-text">
 														Загрузить свой дизайн-проект ↑
-													</h3>
-												</a>
+													</a>
+												</div>
 												<p class="estimate__download-text">
 													Если дизайн-проекта нет — пропустите этот пункт.
 												</p>
@@ -1411,51 +1426,108 @@
 			</footer>
 		</div>
 
-		<div class="modal-call ">
-			<div class="modal-call__window ">
-				<a class="modal-call__close-btn " id="close"> × </a>
+		<div class="modal-call">
+			<div class="modal-call__window">
+				<a class="modal-call__close-btn" id="close"> × </a>
 
-				<h2 class="modal-call__title title ">Заказать звонок</h2>
+				<h2 class="modal-call__title title">Заказать звонок</h2>
 
-				<form class="modal-call__form ">
-					<label class="modal-call__lable ">
-						
-						<input placeholder="Имя"
-							class="modal-call__name"
+				<form id="form" class="form modal-call__form" autocomplete="off">
+					<div class="modal-call__item form__input-box">
+						<input
+							class="modal-call__input form__input-inp"
 							type="text"
+							id="name"
 							name="name"
+							placeholder="Имя"
+							autocomplete="off"
 						/>
-					</label>
-					<label class="modal-call__lable ">
-						
-						<input placeholder="Телефон" class="modal-call__tel " type="tel" name="tel" />
-					</label>
-					<label class="modal-call__lable ">
-						
-						<input placeholder="Удобное время для звонка"
-							class="modal-call__time "
-							type="text"
-							name="time"
+					</div>
+					<div class="modal-call__item form__input-box">
+						<input
+							class="modal-call__input form__input-inp"
+							type="tel"
+							id="tel"
+							name="tel"
+							placeholder="+7(___) ___-__-__"
+							autocomplete="off"
 						/>
-						<span class="modal-call__lable-timetocall "
-							>Мы можем перезвонить в любой день с 9:00 до 22:00</span
-						>
-					</label>
+					</div>
+					<div class="modal-call__item form__input-box">
+						<textarea
+							class="modal-call__input form__input-inp"
+							name="msg"
+							id="msg"
+							placeholder="Удобное время для звонка"
+						></textarea>
+					</div>
+					<span class="modal-call__timetocall"
+						>Мы можем перезвонить в любой день с 9:00 до 22:00</span
+					>
 
-					<button class="modal-call__btn btn " type="submit">
-						Отправить
+					<button class="modal-call__btn btn form__btn" type="submit">
+						Отправить сообщение
 					</button>
-					<div class="modal-call__text ">
+					<div class="modal-call__text">
 						<p>Нажимая на кнопку, вы соглашаетесь с политикой</p>
 						<a href="#" target="_blank">защиты персональной информации.</a>
 					</div>
 				</form>
+
+				<!-- <form class="modal-call__form form" id="form" autocomplete="off">
+					<div class="modal-call__item">
+						<label class="modal-call__lable" for="formName"> </label>
+						<input
+							placeholder="Имя"
+							class="modal-call__input"
+							type="text"
+							name="name"
+							id="modalName"
+							autocomplete="off"
+						/>
+					</div>
+					<div class="modal-call__item">
+						<label class="modal-call__lable" for="formTel"> </label>
+						<input
+							placeholder="+7(___) ___-__-__"
+							class="modal-call__input"
+							type="tel"
+							name="tel"
+							id="modalTel"
+							autocomplete="off"
+						/>
+					</div>
+					<div class="modal-call__item">
+						<label class="modal-call__lable" for="formCallTime"> </label>
+						<input
+							placeholder="Удобное время для звонка"
+							class="modal-call__input"
+							type="text"
+							name="time"
+							id="modalCallTime"
+							autocomplete="off"
+						/>
+					</div>
+					<span class="modal-call__timetocall"
+						>Мы можем перезвонить в любой день с 9:00 до 22:00</span
+					>
+
+					<button class="modal-call__btn btn" type="submit">Отправить</button>
+					<div class="modal-call__text">
+						<p>Нажимая на кнопку, вы соглашаетесь с политикой</p>
+						<a href="#" target="_blank">защиты персональной информации.</a>
+					</div>
+				</form> -->
 			</div>
 		</div>
 
+		<script src="js/code.jquery.com_jquery-3.7.1.js"></script>
 		<script src="js/fslightbox.js"></script>
 		<script src="js/swiper-bundle.min.js"></script>
 		<script src="js/inputmask.min.js"></script>
-		<script src="js/main.js"></script>
+		<script src="js/just-validate.min.js"></script>
+		<script type="module" src="js/forma-modal.js"></script>
+
+		<script type="module" src="js/main.js"></script>
 	</body>
 </html>

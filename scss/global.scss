@@ -91,11 +91,14 @@ h1 {
 		font-size: 20px;
 	}
 }
-input::placeholder{
+input::placeholder {
 	color: var(--color-second-text);
 }
+input:focus::placeholder {
+	font-size: 18px;
+}
 
-.body--opened-menu {
+.burger-menu_active {
 	overflow: hidden;
 }
 
@@ -161,33 +164,32 @@ input::placeholder{
 	// .modal-call__lable
 
 	&__lable {
-		input {
-			border-bottom: 1px solid #99999980;
-			transition: var(--transition);
-			margin-bottom: 80px;
-			font-size: 24px;
-			width: 100%;
-		}
-
-		input:hover {
-			border-bottom: 1px solid hsla(15, 87%, 55%, 0.5);
-		}
-
-		input:focus {
-			border-bottom: 1px solid hsla(15, 87%, 55%, 0.5);
-		}
-
-		span {
-			display: block;
-			color: var(--color-second-text);
-			font-family: Inter;
-			font-size: 12px;
-			font-style: normal;
-			font-weight: 400;
-			line-height: 2.25;
-			margin-top: -52px;
-			padding-bottom: 64px;
-		}
+		
+		
+	}
+	&__input {
+		border-bottom: 1px solid #99999980;
+		transition: var(--transition);
+		margin-bottom: 80px;
+		font-size: 24px;
+		width: 100%;
+	}
+	&__input:hover {
+		border-bottom: 1px solid hsla(15, 87%, 55%, 0.5);
+	}
+	&__input:focus {
+		border-bottom: 1px solid hsla(15, 87%, 55%, 0.5);
+	}
+	&__timetocall {
+		display: block;
+		color: var(--color-second-text);
+		font-family: Inter;
+		font-size: 12px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 2.25;
+		margin-top: -52px;
+		padding-bottom: 64px;
 	}
 
 	&__btn {
@@ -215,4 +217,8 @@ input::placeholder{
 .body--modal-opened .modal-call {
 	opacity: 1;
 	visibility: visible;
+}
+
+.modal-call__lable._error {
+	box-shadow: 0 0 15px red;
 }

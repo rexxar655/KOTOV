@@ -1,37 +1,34 @@
-; (function () {
+;(function () {
 	// // =================================BURGER================================
 
-	; (function () {
-		document.addEventListener('click', burgerinit)
-		function burgerinit(e) {
-			const burger = e.target.closest('.header__menu')
-			const close = e.target.closest('.burger-close')
+	function burgerMenu(selector) {
+		let menu = $(selector)
+		let button = menu.find('.burger-btn')
+		let links = menu.find('.header__link')
+		let overlay = menu.find('.burger-menu_overlay')
 
-			if (!burger && !close) return
-			// if (document.documentElement.clientWidth > 900) return
+		button.on('click', e => {
+			e.preventDefault()
+			toggleMenu()
+		})
 
-			if (!document.body.classList.contains('body--opened-menu')) {
-				document.body.classList.add('body--opened-menu')
+		links.on('click', () => toggleMenu())
+		overlay.on('click', () => toggleMenu())
+
+		function toggleMenu() {
+			menu.toggleClass('burger-menu_active')
+
+			if (menu.hasClass('burger-menu_active')) {
+				$('body').css('overlow', 'hidden')
 			} else {
-				document.body.classList.remove('body--opened-menu')
+				$('body').css('overlow', 'visible')
 			}
-
-			document.addEventListener('mouseup', function (e) {
-				if (!(e.target.classList.contains('header__menu')) &&
-					!(e.target.classList.contains('header__burger')) &&
-					!(e.target.classList.contains('header__nav-burger')) &&
-					!(e.target.classList.contains('header__item')) &&
-					!(e.target.classList.contains('header__menu-text')) &&
-					!(e.target.classList.contains('burger-close')) &&
-					!(e.target.classList.contains('header__social')) &&
-					!(e.target.classList.contains('header__social-link')) &&
-					!(e.target.classList.contains('header__link'))
-				) {
-					document.body.classList.remove('body--opened-menu')
-				}
-			})
 		}
-	})()
+	}
+
+	burgerMenu('.body')
+
+	
 
 	// 	// ==================================MODAL==================================
 
@@ -163,7 +160,6 @@
 		if (activeControl) activeControl.classList.remove('projects__tab--active')
 
 		tabContent.classList.add('projects__tab--show')
-
 	})
 
 	// ============================clients__swiper=======================
@@ -194,10 +190,6 @@
 		},
 	})
 
-
-
-
-
 	// ==============================main tabs order==================================
 
 	const tabOrder = document.querySelectorAll('.order__nav')
@@ -225,11 +217,7 @@
 		tabOrder.classList.add('order__nav-link--activ')
 	}
 
-
-
-
 	// ===========================orders tab=====================
-
 
 	const ordersTabControl = document.querySelector('.order__tabs')
 
@@ -247,13 +235,13 @@
 		const activeControl = document.querySelector('.order__tabs-link--activ')
 		const activeContent = document.querySelector('.order__tabs-content--show')
 
-		if (activeContent) activeContent.classList.remove('order__tabs-content--show')
+		if (activeContent)
+			activeContent.classList.remove('order__tabs-content--show')
 		if (activeControl) activeControl.classList.remove('order__tabs-link--activ')
 
 		tabContent.classList.add('order__tabs-content--show')
 		ordersTabControl.classList.add('order__tabs-link--activ')
 	}
-
 
 	// ===============================select accent=========================
 
@@ -319,7 +307,4 @@
 
 		form_three.classList.add('form_three--activ')
 	}
-
-
-
 })()

@@ -127,7 +127,27 @@ input::placeholder {
   color: var(--color-second-text);
 }
 
-.body--opened-menu {
+input:focus::-webkit-input-placeholder {
+  font-size: 18px;
+}
+
+input:focus::-moz-placeholder {
+  font-size: 18px;
+}
+
+input:focus:-ms-input-placeholder {
+  font-size: 18px;
+}
+
+input:focus::-ms-input-placeholder {
+  font-size: 18px;
+}
+
+input:focus::placeholder {
+  font-size: 18px;
+}
+
+.burger-menu_active {
   overflow: hidden;
 }
 
@@ -195,7 +215,7 @@ input::placeholder {
   color: var(--color-accent);
   padding-bottom: 80px;
 }
-.modal-call__lable input {
+.modal-call__input {
   border-bottom: 1px solid rgba(153, 153, 153, 0.5019607843);
   -webkit-transition: var(--transition);
   transition: var(--transition);
@@ -203,13 +223,13 @@ input::placeholder {
   font-size: 24px;
   width: 100%;
 }
-.modal-call__lable input:hover {
+.modal-call__input:hover {
   border-bottom: 1px solid hsla(15, 87%, 55%, 0.5);
 }
-.modal-call__lable input:focus {
+.modal-call__input:focus {
   border-bottom: 1px solid hsla(15, 87%, 55%, 0.5);
 }
-.modal-call__lable span {
+.modal-call__timetocall {
   display: block;
   color: var(--color-second-text);
   font-family: Inter;
@@ -238,4 +258,9 @@ input::placeholder {
 .body--modal-opened .modal-call {
   opacity: 1;
   visibility: visible;
+}
+
+.modal-call__lable._error {
+  -webkit-box-shadow: 0 0 15px red;
+          box-shadow: 0 0 15px red;
 }
