@@ -933,14 +933,17 @@ span.swiper-pagination-bullet-active {
       -ms-flex-direction: column;
           flex-direction: column;
 }
+.estimate__item {
+  padding-bottom: 80px;
+}
 .estimate__input {
   background: transparent;
   border-bottom: 1px solid rgba(153, 153, 153, 0.5019607843);
   -webkit-transition: var(--transition);
   transition: var(--transition);
-  margin-bottom: 80px;
   font-size: 24px;
   max-width: 478px;
+  height: 40px;
   width: 100%;
 }
 .estimate__input:hover {
@@ -950,7 +953,7 @@ span.swiper-pagination-bullet-active {
   border-bottom: 1px solid hsla(15, 87%, 55%, 0.5);
 }
 .estimate__download {
-  padding-bottom: 55px;
+  margin-bottom: 55px;
   position: relative;
 }
 .estimate__download-input input {

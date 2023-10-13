@@ -1,8 +1,10 @@
+// =========================SEND FORM==================
+
 let selector = document.querySelector('#tel')
 let im = new Inputmask('+7(999) 999-99-99')
 im.mask(selector)
 
-let validation = new JustValidate('form')
+let validation = new JustValidate('#form')
 
 validation
 	.addField('#name', [
@@ -32,17 +34,7 @@ validation
 			errorMessage: 'Введите телефон полностью',
 		},
 	])
-	.addField('#msg', [
-		{
-			rule: 'required',
-			errorMessage: 'Введите сообщение!',
-		},
-		{
-			rule: 'minLength',
-			value: 10,
-			errorMessage: 'Минимум 10 символа!',
-		},
-	])
+	
 	.onSuccess(async function () {
 		let data = {
 			name: document.getElementById('name').value,

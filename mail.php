@@ -37,7 +37,7 @@ try {
   $mail->setFrom('rexxar655@yandex.ru', 'Заявка с сайта'); // Адрес самой почты и имя отправителя
 
   // Получатель письма
-  $mail->addAddress('drok88@mail.ru');
+  $mail->addAddress('rexxar655@yandex.ru');
 
   // Отправка сообщения
   $mail->isHTML(true);

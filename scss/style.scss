@@ -994,27 +994,31 @@ span.swiper-pagination-bullet-active {
 
 	// .estimate__lable
 
-	&__lable {
-		
+	&__item {
+		padding-bottom: 80px;
+
 	}
+
 	&__input {
 		background: transparent;
 		border-bottom: 1px solid #99999980;
 		transition: var(--transition);
-		margin-bottom: 80px;
 		font-size: 24px;
 		max-width: 478px;
+		height: 40px;
 		width: 100%;
 	}
+
 	&__input:hover {
 		border-bottom: 1px solid hsla(15, 87%, 55%, 0.5);
 	}
+
 	&__input:focus {
 		border-bottom: 1px solid hsla(15, 87%, 55%, 0.5);
 	}
 
 	&__download {
-		padding-bottom: 55px;
+		margin-bottom: 55px;
 		position: relative;
 	}
 

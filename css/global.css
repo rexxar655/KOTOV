@@ -215,11 +215,14 @@ input:focus::placeholder {
   color: var(--color-accent);
   padding-bottom: 80px;
 }
+.modal-call__item {
+  padding-bottom: 80px;
+}
 .modal-call__input {
   border-bottom: 1px solid rgba(153, 153, 153, 0.5019607843);
   -webkit-transition: var(--transition);
   transition: var(--transition);
-  margin-bottom: 80px;
+  height: 40px;
   font-size: 24px;
   width: 100%;
 }
@@ -237,8 +240,7 @@ input:focus::placeholder {
   font-style: normal;
   font-weight: 400;
   line-height: 2.25;
-  margin-top: -52px;
-  padding-bottom: 64px;
+  padding-top: 12px;
 }
 .modal-call__btn {
   background: var(--color-second-text);

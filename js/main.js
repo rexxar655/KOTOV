@@ -1,34 +1,27 @@
-;(function () {
+; (function () {
 	// // =================================BURGER================================
 
-	function burgerMenu(selector) {
-		let menu = $(selector)
-		let button = menu.find('.burger-btn')
-		let links = menu.find('.header__link')
-		let overlay = menu.find('.burger-menu_overlay')
 
-		button.on('click', e => {
-			e.preventDefault()
-			toggleMenu()
-		})
+	(function () {
+		document.addEventListener('click', burgerinit)
+		function burgerinit(e) {
+			const burger = e.target.closest('.header__menu')
+			const close = e.target.closest('.burger-close')
 
-		links.on('click', () => toggleMenu())
-		overlay.on('click', () => toggleMenu())
+			if (!burger && !close) return
+			// if (document.documentElement.clientWidth > 900) return
 
-		function toggleMenu() {
-			menu.toggleClass('burger-menu_active')
-
-			if (menu.hasClass('burger-menu_active')) {
-				$('body').css('overlow', 'hidden')
+			if (!document.body.classList.contains('burger-menu_active')) {
+				document.body.classList.add('burger-menu_active')
 			} else {
-				$('body').css('overlow', 'visible')
+				document.body.classList.remove('burger-menu_active')
+
 			}
+
 		}
-	}
+	})()
 
-	burgerMenu('.body')
 
-	
 
 	// 	// ==================================MODAL==================================
 
@@ -308,3 +301,5 @@
 		form_three.classList.add('form_three--activ')
 	}
 })()
+
+

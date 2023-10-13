@@ -163,14 +163,15 @@ input:focus::placeholder {
 
 	// .modal-call__lable
 
-	&__lable {
+	&__item {
+		padding-bottom: 80px;
 		
 		
 	}
 	&__input {
 		border-bottom: 1px solid #99999980;
 		transition: var(--transition);
-		margin-bottom: 80px;
+		height: 40px;
 		font-size: 24px;
 		width: 100%;
 	}
@@ -188,8 +189,8 @@ input:focus::placeholder {
 		font-style: normal;
 		font-weight: 400;
 		line-height: 2.25;
-		margin-top: -52px;
-		padding-bottom: 64px;
+		padding-top: 12px;
+		
 	}
 
 	&__btn {
