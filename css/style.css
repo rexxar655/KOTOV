@@ -347,6 +347,7 @@
 @media (max-width: 800px) {
   .projects__prev {
     display: none;
+    
   }
 }
 .projects__swiper {
