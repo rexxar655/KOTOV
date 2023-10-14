@@ -34,7 +34,7 @@ validation
 			errorMessage: 'Введите телефон полностью',
 		},
 	])
-	
+
 	.onSuccess(async function () {
 		let data = {
 			name: document.getElementById('name').value,

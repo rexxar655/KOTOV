@@ -28,16 +28,16 @@ try {
   $mail->SMTPAuth   = true;
 
   // Настройки почты отправителя
-  $mail->Host       = 'smtp.yandex.com'; // SMTP сервера вашей почты
-  $mail->Username   = 'rexxar655@yandex.ru'; // Логин на почте
-  $mail->Password   = 'pnfwqiplmsgefwjc'; // Пароль на почте
+  $mail->Host       = 'smtp.gmail.com'; // SMTP сервера вашей почты
+  $mail->Username   = 'atari655@gmail.com'; // Логин на почте
+  $mail->Password   = 'erco avsa bbfr qxdk'; // Пароль на почте
   $mail->SMTPSecure = 'ssl';
   $mail->Port       = 465;
 
-  $mail->setFrom('rexxar655@yandex.ru', 'Заявка с сайта'); // Адрес самой почты и имя отправителя
+  $mail->setFrom('atari655@gmail.com', 'Заявка с сайта'); // Адрес самой почты и имя отправителя
 
   // Получатель письма
-  $mail->addAddress('rexxar655@yandex.ru');
+  $mail->addAddress('atari655@gmail.com');
 
   // Отправка сообщения
   $mail->isHTML(true);

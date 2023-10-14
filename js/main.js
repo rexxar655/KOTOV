@@ -1,8 +1,7 @@
-; (function () {
+;(function () {
 	// // =================================BURGER================================
 
-
-	(function () {
+	;(function () {
 		document.addEventListener('click', burgerinit)
 		function burgerinit(e) {
 			const burger = e.target.closest('.header__menu')
@@ -15,13 +14,9 @@
 				document.body.classList.add('burger-menu_active')
 			} else {
 				document.body.classList.remove('burger-menu_active')
-
 			}
-
 		}
 	})()
-
-
 
 	// 	// ==================================MODAL==================================
 
@@ -301,5 +296,3 @@
 		form_three.classList.add('form_three--activ')
 	}
 })()
-
-
