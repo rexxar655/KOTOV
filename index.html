@@ -1095,7 +1095,8 @@
 								<div class="order__form">
 									<div class="order__area">
 										<p class="order__text">Площадь квартиры</p>
-										<input class="order__area-input" type="number" /><span
+										<input class="order__area-input" min="0" type="number" oninput="this.value = this.value.replace(/[^\d]/g,'');"> 
+										<span
 											>м²</span
 										>
 									</div>
